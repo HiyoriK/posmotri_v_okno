@@ -9,13 +9,13 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -38,35 +38,64 @@ ol {
 }
 
 .content {
-  margin: 133px 30px;
   display: grid;
-  align-items: end;
   grid-template-columns: 711px 399px;
+  align-items: end;
   gap: 30px;
+  margin: 133px 30px;
 }
 
 .result__video {
   inline-size: 100%;
-  
 }
 
 .search-form {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: end;
   margin-top: 16px;
 }
 
 .content__details {
   inline-size: 100%;
-  block-size: 100%; 
+  block-size: 100%;
 }
+
+.button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: inherit;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/*На макете разные состояния прописаны только для кнопки "Найти", для второй - не указано отдельных уточнений, но  логично предположить, что все кнопки ведут себя одинаково. Иначе - было странно.
+-_-
+Если это не затея дизайнера, конечно.*/
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:hover{
+  text-decoration: underline;
+}
+
+.button:focus{
+  outline: 1px solid #fff;
+}
+
+.search-form__submit-button {
+  padding: 6px 73px;
+}
+
 
 .title {
   margin-bottom: 26px;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 75px;
-  font-weight: 700;
   line-height: 0.94;
   text-transform: uppercase;
 }
@@ -75,18 +104,57 @@ ol {
   color: #545050;
 }
 
-
-
 .content__list {
+  overflow-y: scroll;
   block-size: 298px;
-  overflow-y: scroll;  
 }
 
 .content__list-item {
   margin-bottom: 30px;
 }
 
+.content__card-link {
+  text-decoration: none;
+  color:#fff;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  
+}
+
+.content__card-link:focus {
+  border: 1px solid #fff;
+}
+
+
 .content__video-card {
   display: grid;
   grid-template-columns: 1fr 194px;
+}
+
+.content__video-card-title {
+  margin-bottom: 6px;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 0.9;
+}
+
+.content__video-card-thumbnail {
+  height: 103px;
+  width: 100%;
 }
