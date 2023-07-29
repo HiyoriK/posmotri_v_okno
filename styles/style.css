@@ -13,6 +13,7 @@ html {
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
+  line-height: 1.2;
   background-color: #1b1919;
   inline-size: 1200px;
   block-size: 100%;
@@ -40,20 +41,56 @@ ol {
 .content {
   display: grid;
   grid-template-columns: 711px 399px;
+  justify-items: stretch;
   align-items: end;
   gap: 30px;
-  margin: 133px 30px;
+  padding: 133px 30px;
+}
+
+.result__video-container {
+  position: relative;
+  margin-bottom: 16px;
+  inline-size: 100%;
 }
 
 .result__video {
+  background-size: cover;
   inline-size: 100%;
+  block-size: 100%;
 }
 
 .search-form {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  margin-top: 16px;
+}
+
+.search-form__fieldset-title {
+  font-weight: 400;
+}
+
+.button {
+  border: 1px solid #fff;
+  color: inherit;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  background-color: transparent;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:hover {
+}
+
+.button:focus {
+}
+
+.search-form__submit-button {
+  padding: 6px 73px;
 }
 
 .content__details {
@@ -61,43 +98,8 @@ ol {
   block-size: 100%;
 }
 
-.button {
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: inherit;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-/*На макете разные состояния прописаны только для кнопки "Найти", для второй - не указано отдельных уточнений, но  логично предположить, что все кнопки ведут себя одинаково. Иначе - было странно.
--_-
-Если это не затея дизайнера, конечно.*/
-
-.button:active {
-  background-color: #545050;
-}
-
-.button:hover{
-  text-decoration: underline;
-}
-
-.button:focus{
-  outline: 1px solid #fff;
-}
-
-.search-form__submit-button {
-  padding: 6px 73px;
-}
-
-
 .title {
   margin-bottom: 26px;
-  font-family: "Oswald", sans-serif;
-  font-size: 75px;
-  line-height: 0.94;
-  text-transform: uppercase;
 }
 
 .content__accent {
@@ -105,56 +107,41 @@ ol {
 }
 
 .content__list {
-  overflow-y: scroll;
+  position: relative;
+  overflow: scroll;
   block-size: 298px;
 }
 
-.content__list-item {
-  margin-bottom: 30px;
+.content__list-item:not(:first-child) {
+  margin-top: 30px;
 }
 
 .content__card-link {
-  text-decoration: none;
-  color:#fff;
 }
 
 .content__card-link:active {
-  background-color: #545050;
 }
 
 .content__card-link:hover {
-  text-decoration: underline;
-  
 }
 
 .content__card-link:focus {
-  border: 1px solid #fff;
 }
-
 
 .content__video-card {
   display: grid;
   grid-template-columns: 1fr 194px;
 }
 
-.content__video-card-title {
-  margin-bottom: 6px;
-  color: #fff;
-  font-family: "Oswald", sans-serif;
-  font-size: 30px;
-  line-height: 1.2;
-  text-transform: uppercase;
+.content__video-card-description-container .content__video-card-title {
+  inline-size: 100%;
 }
 
 .content__video-card-description {
-  color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 0.9;
 }
 
 .content__video-card-thumbnail {
-  height: 103px;
-  width: 100%;
+  background-size: cover;
+  inline-size: 100%;
+  block-size: 100%;
 }
