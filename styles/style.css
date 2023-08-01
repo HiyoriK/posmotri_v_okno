@@ -129,24 +129,22 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  position: relative;
-  display: inline-block;
+  display: block;
   margin-inline-end: 5px;
   border: 1px solid #fff;
   background-color: transparent;
+  padding: 1px;
   cursor: pointer;
   block-size: 19px;
   inline-size: 19px;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox:after {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox:before {
   content: "";
-  position: absolute;
+  display: block;
   background-color: #fff;
   inline-size: 15px;
   block-size: 15px;
-  inset-inline-end: 1px;
-  inset-block-start: 1px;
 }
 
 .search-form__checkbox:hover ~ .search-form__label-text {
@@ -155,7 +153,6 @@ ol {
 
 .search-form__checkbox:active + .search-form__pseudo-checkbox:before {
   content: "";
-  position: absolute;
   background-color: #fff;
   inline-size: 15px;
   block-size: 15px;
