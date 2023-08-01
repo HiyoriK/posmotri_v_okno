@@ -211,6 +211,7 @@ ol {
 }
 
 .content__list {
+  position: relative;
   overflow-y: scroll;
   max-block-size: 298px;
 }
