@@ -133,19 +133,20 @@ ol {
   display: inline-block;
   margin-inline-end: 5px;
   border: 1px solid #fff;
-  padding: 1px;
   background-color: transparent;
   cursor: pointer;
   block-size: 19px;
   inline-size: 19px;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox:before {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox:after {
   content: "";
   position: absolute;
   background-color: #fff;
   inline-size: 15px;
   block-size: 15px;
+  inset-inline-end: 1px;
+  inset-block-start: 1px;
 }
 
 .search-form__checkbox:hover ~ .search-form__label-text {
